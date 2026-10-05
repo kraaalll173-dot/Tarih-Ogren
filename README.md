@@ -14,176 +14,141 @@
         }
 
         body {
-            font-family: Georgia, "Times New Roman", serif;
-            background: #0b1018;
-            color: #f4efe4;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f3eb;
+            color: #29241d;
+            line-height: 1.6;
         }
 
         header {
-            padding: 25px 8%;
-            border-bottom: 1px solid #293342;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            padding: 25px 7%;
+            background: #fffdf9;
+            border-bottom: 1px solid #e4dccf;
         }
 
         .logo {
-            font-size: 26px;
-            font-weight: bold;
-            letter-spacing: 2px;
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: 1px;
         }
 
         .logo span {
-            color: #c9a45c;
-        }
-
-        nav a {
-            color: #ddd;
-            text-decoration: none;
-            margin-left: 25px;
-            font-family: Arial, sans-serif;
-        }
-
-        nav a:hover {
-            color: #c9a45c;
+            color: #a87932;
         }
 
         .hero {
-            min-height: 650px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             text-align: center;
-            padding: 60px 20px;
-
-            background:
-                radial-gradient(
-                    circle at center,
-                    #1a2738,
-                    #0b1018 65%
-                );
+            padding: 80px 20px 60px;
         }
 
-        .hero-content {
-            max-width: 900px;
-            width: 100%;
-        }
-
-        .small-title {
-            color: #c9a45c;
-            letter-spacing: 5px;
-            font-family: Arial, sans-serif;
-            font-size: 13px;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            font-size: clamp(50px, 8vw, 95px);
+        .hero h1 {
+            font-size: clamp(40px, 7vw, 76px);
             line-height: 1.05;
             margin-bottom: 25px;
         }
 
-        h1 span {
-            color: #c9a45c;
+        .hero h1 span {
+            color: #a87932;
         }
 
-        .description {
-            max-width: 650px;
+        .hero p {
+            max-width: 700px;
             margin: auto;
-            color: #aaa;
-            font-family: Arial, sans-serif;
-            font-size: 17px;
-            line-height: 1.7;
-            margin-bottom: 35px;
+            color: #6d665b;
+            font-size: 18px;
+        }
+
+        .search-area {
+            max-width: 800px;
+            margin: 35px auto 0;
         }
 
         .search-box {
-            max-width: 720px;
-            margin: auto;
             display: flex;
-            background: #111923;
-            border: 1px solid #3a4655;
-            padding: 8px;
-            border-radius: 6px;
+            background: white;
+            border: 1px solid #d8cdbc;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
         }
 
         .search-box input {
             flex: 1;
-            padding: 16px;
+            padding: 18px 20px;
             border: none;
             outline: none;
-            background: transparent;
-            color: white;
             font-size: 17px;
+            background: transparent;
         }
 
         .search-box button {
             border: none;
-            background: #c9a45c;
-            color: #111;
-            font-weight: bold;
+            background: #a87932;
+            color: white;
             padding: 0 30px;
+            font-size: 16px;
+            font-weight: bold;
             cursor: pointer;
-            border-radius: 4px;
+            transition: 0.2s;
         }
 
         .search-box button:hover {
-            background: #e0bd72;
+            background: #8c6329;
         }
 
         .source-info {
             margin-top: 15px;
-            color: #777;
-            font-family: Arial, sans-serif;
-            font-size: 13px;
+            color: #777064;
+            font-size: 14px;
         }
 
-        .categories {
-            padding: 100px 8%;
+        .discover {
+            padding: 60px 7%;
         }
 
         .section-title {
-            text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
         }
 
-        .section-title p {
-            color: #c9a45c;
-            letter-spacing: 4px;
-            font-family: Arial, sans-serif;
-            font-size: 12px;
+        .section-title > p {
+            color: #a87932;
+            font-weight: bold;
+            letter-spacing: 2px;
+            font-size: 14px;
         }
 
         .section-title h2 {
-            font-size: 42px;
-            margin-top: 12px;
+            font-size: clamp(28px, 4vw, 45px);
+            margin-top: 8px;
         }
 
-        .section-title span {
-            color: #c9a45c;
+        .section-title h2 span,
+        .about h2 span {
+            color: #a87932;
         }
 
         .category-grid {
-            max-width: 1200px;
-            margin: auto;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
         }
 
         .category-card {
-            background: #111923;
-            border: 1px solid #293544;
-            color: white;
-            padding: 30px;
             text-align: left;
+            padding: 28px;
+            min-height: 210px;
+            background: #fffdf9;
+            border: 1px solid #e4dccf;
+            border-radius: 16px;
             cursor: pointer;
-            transition: 0.3s;
+            transition: 0.25s;
+            color: #29241d;
         }
 
         .category-card:hover {
             transform: translateY(-5px);
-            border-color: #c9a45c;
+            border-color: #a87932;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
         }
 
         .category-icon {
@@ -193,98 +158,167 @@
 
         .category-card h3 {
             font-size: 22px;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .category-card p {
-            color: #8e96a1;
-            font-family: Arial, sans-serif;
-            font-size: 14px;
+            color: #716a60;
         }
 
-        .results {
-            max-width: 1000px;
-            margin: auto;
-            padding: 30px 8% 100px;
+        #resultsContainer {
+            padding: 20px 7% 70px;
         }
 
-        .result-card {
-            background: #111923;
-            border: 1px solid #293544;
-            padding: 35px;
-            margin-top: 25px;
+        .results-header {
+            margin-bottom: 25px;
         }
 
-        .result-card h2 {
-            color: #c9a45c;
-            margin-bottom: 15px;
+        .results-header h2 {
+            font-size: 30px;
         }
 
-        .result-card p {
-            color: #bbb;
-            font-family: Arial, sans-serif;
+        .results-header p {
+            color: #716a60;
+        }
+
+        .history-results {
+            display: grid;
+            gap: 18px;
+        }
+
+        .history-result-card {
+            background: #fffdf9;
+            border: 1px solid #e1d8ca;
+            border-radius: 15px;
+            padding: 25px;
+            transition: 0.2s;
+        }
+
+        .history-result-card:hover {
+            border-color: #a87932;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+        }
+
+        .result-number {
+            display: inline-block;
+            color: #a87932;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .history-result-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .history-result-card p {
+            color: #625c53;
+        }
+
+        .source-box {
+            margin-top: 18px;
+            padding-top: 15px;
+            border-top: 1px solid #e5ddd1;
+        }
+
+        .source-box strong {
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .source-box a {
+            color: #a87932;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .source-box a:hover {
+            text-decoration: underline;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            font-size: 18px;
+            color: #766f64;
+        }
+
+        .error-box {
+            background: #fff1ef;
+            border: 1px solid #e4b8b0;
+            color: #8d3429;
+            border-radius: 12px;
+            padding: 18px;
         }
 
         .about {
-            padding: 100px 20px;
-            text-align: center;
-            background: #101722;
+            padding: 80px 7%;
+            background: #29241d;
+            color: white;
         }
 
         .about-title {
-            color: #c9a45c;
-            letter-spacing: 4px;
-            font-family: Arial, sans-serif;
-            font-size: 12px;
+            color: #c99b54;
+            letter-spacing: 2px;
+            font-weight: bold;
+            margin-bottom: 10px;
         }
 
         .about h2 {
-            font-size: 42px;
-            margin: 15px 0 25px;
+            font-size: clamp(30px, 5vw, 55px);
+            max-width: 800px;
+            margin-bottom: 20px;
         }
 
-        .about h2 span {
-            color: #c9a45c;
-        }
-
-        .about p:last-child {
-            max-width: 650px;
-            margin: auto;
-            color: #999;
-            font-family: Arial, sans-serif;
-            line-height: 1.7;
+        .about > p:last-child {
+            max-width: 700px;
+            color: #d0c8bb;
+            font-size: 17px;
         }
 
         footer {
-            padding: 35px 8%;
-            border-top: 1px solid #293342;
-            display: flex;
-            justify-content: space-between;
-            color: #777;
-            font-family: Arial, sans-serif;
+            background: #1e1a15;
+            color: #bdb5a9;
+            padding: 35px 7%;
+        }
+
+        footer .logo {
+            color: white;
+            margin-bottom: 5px;
+        }
+
+        footer p {
+            font-size: 14px;
         }
 
         @media (max-width: 800px) {
-            nav {
-                display: none;
-            }
-
             .category-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 550px) {
+            .hero {
+                padding-top: 55px;
             }
 
             .search-box {
                 flex-direction: column;
-                gap: 8px;
             }
 
             .search-box button {
                 padding: 15px;
             }
 
-            footer {
-                flex-direction: column;
-                gap: 15px;
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .discover,
+            #resultsContainer,
+            .about {
+                padding-left: 5%;
+                padding-right: 5%;
             }
         }
     </style>
@@ -293,44 +327,33 @@
 <body>
 
 <header>
-
     <div class="logo">
         TARİH <span>ÖĞREN</span>
     </div>
-
-    <nav>
-        <a href="#">Ana Sayfa</a>
-        <a href="#kategoriler">Kategoriler</a>
-        <a href="#hakkimizda">Hakkımızda</a>
-    </nav>
-
 </header>
 
 
 <section class="hero">
 
-    <div class="hero-content">
+    <h1>
+        Tarihi <span>öğren.</span><br>
+        Geçmişi keşfet.
+    </h1>
 
-        <p class="small-title">
-            TARİHİN İZİNİ SÜR
-        </p>
+    <p>
+        Tarihin önemli kişilerini, savaşlarını, devletlerini,
+        antlaşmalarını ve medeniyetlerini kaynaklarıyla araştır.
+    </p>
 
-        <h1>
-            Tarihi <span>Öğren.</span><br>
-            Geçmişi <span>Keşfet.</span>
-        </h1>
-
-        <p class="description">
-            Tarihî kişiler, savaşlar, devletler ve olaylar
-            hakkında bilgi edin ve kaynaklarını keşfet.
-        </p>
+    <div class="search-area">
 
         <div class="search-box">
 
             <input
-                id="searchInput"
                 type="text"
-                placeholder="Örneğin: Fatih Sultan Mehmet"
+                id="historySearch"
+                placeholder="Tarihte ne aramak istiyorsun?"
+                onkeydown="if(event.key === 'Enter') searchHistory()"
             >
 
             <button onclick="searchHistory()">
@@ -348,7 +371,7 @@
 </section>
 
 
-<section id="kategoriler" class="categories">
+<section class="discover">
 
     <div class="section-title">
 
@@ -457,14 +480,10 @@
 </section>
 
 
-<section id="sonuclar" class="results">
-
-    <div id="resultsContainer"></div>
-
-</section>
+<div id="resultsContainer"></div>
 
 
-<section id="hakkimizda" class="about">
+<section class="about">
 
     <p class="about-title">
         HAKKIMIZDA
@@ -499,98 +518,289 @@
 
 <script>
 
-function searchHistory() {
+    /*
+     * TÜRKİYE WİKİPEDİA API
+     *
+     * Arama sonuçlarını Türkçe Wikipedia'dan alıyoruz.
+     * Sonuçların altında doğrudan kaynak bağlantısı
+     * gösteriyoruz.
+     */
 
-    const input =
-        document.getElementById("searchInput");
+    const WIKI_API = "https://tr.wikipedia.org/w/api.php";
 
-    const query =
-        input.value.trim();
 
-    if (query === "") {
+    function escapeHTML(text) {
 
-        alert("Lütfen bir tarihî konu yaz.");
+        if (!text) return "";
 
-        return;
+        return text
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
     }
 
-    showResult(query);
-}
 
+    async function wikiSearch(query, limit = 8) {
 
-function searchCategory(category) {
+        const url =
+            WIKI_API +
+            "?action=opensearch" +
+            "&search=" + encodeURIComponent(query) +
+            "&limit=" + limit +
+            "&namespace=0" +
+            "&format=json" +
+            "&origin=*";
 
-    const input =
-        document.getElementById("searchInput");
+        const response = await fetch(url);
 
-    input.value = category;
-
-    input.focus();
-
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-}
-
-
-function showResult(query) {
-
-    const container =
-        document.getElementById("resultsContainer");
-
-    container.innerHTML = `
-
-        <div class="result-card">
-
-            <h2>${escapeHTML(query)}</h2>
-
-            <p>
-                TARİH ÖĞREN araştırma sistemi hazırlanıyor.
-            </p>
-
-            <p style="margin-top:15px;">
-
-                Bir sonraki aşamada burada gerçek
-                kaynaklardan alınan bilgiler ve
-                kaynak bağlantıları gösterilecek.
-
-            </p>
-
-        </div>
-
-    `;
-
-    document
-        .getElementById("sonuclar")
-        .scrollIntoView({
-            behavior: "smooth"
-        });
-}
-
-
-function escapeHTML(text) {
-
-    const div =
-        document.createElement("div");
-
-    div.textContent = text;
-
-    return div.innerHTML;
-}
-
-
-document
-    .getElementById("searchInput")
-    .addEventListener("keydown", function(event) {
-
-        if (event.key === "Enter") {
-
-            searchHistory();
-
+        if (!response.ok) {
+            throw new Error("Wikipedia API bağlantısı kurulamadı.");
         }
 
-    });
+        return await response.json();
+    }
+
+
+    async function wikiPage(title) {
+
+        const url =
+            WIKI_API +
+            "?action=query" +
+            "&prop=extracts|info" +
+            "&exintro=1" +
+            "&explaintext=1" +
+            "&exchars=700" +
+            "&inprop=url" +
+            "&redirects=1" +
+            "&titles=" + encodeURIComponent(title) +
+            "&format=json" +
+            "&origin=*";
+
+        const response = await fetch(url);
+
+        if (!response.ok) {
+            throw new Error("Sayfa bilgisi alınamadı.");
+        }
+
+        const data = await response.json();
+
+        const pages = data.query.pages;
+
+        const page = Object.values(pages)[0];
+
+        return page;
+    }
+
+
+    function showLoading() {
+
+        const container =
+            document.getElementById("resultsContainer");
+
+        container.innerHTML = `
+            <div class="loading">
+                ⏳ Tarihî kaynaklar araştırılıyor...
+            </div>
+        `;
+
+        container.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    }
+
+
+    function showError(message) {
+
+        const container =
+            document.getElementById("resultsContainer");
+
+        container.innerHTML = `
+            <div class="error-box">
+                ❌ ${escapeHTML(message)}
+            </div>
+        `;
+    }
+
+
+    async function searchHistory() {
+
+        const input =
+            document.getElementById("historySearch");
+
+        const query = input.value.trim();
+
+        if (!query) {
+
+            showError(
+                "Lütfen araştırmak istediğin tarihî konuyu yaz."
+            );
+
+            return;
+        }
+
+        showLoading();
+
+        try {
+
+            const data = await wikiSearch(query, 8);
+
+            const titles = data[1];
+            const descriptions = data[2];
+            const urls = data[3];
+
+            if (!titles || titles.length === 0) {
+
+                showError(
+                    `"${query}" için kaynak bulunamadı.`
+                );
+
+                return;
+            }
+
+            await displaySearchResults(
+                query,
+                titles,
+                descriptions,
+                urls
+            );
+
+        } catch (error) {
+
+            console.error(error);
+
+            showError(
+                "Arama sırasında bir hata oluştu. Lütfen tekrar dene."
+            );
+        }
+    }
+
+
+    async function displaySearchResults(
+        query,
+        titles,
+        descriptions,
+        urls
+    ) {
+
+        const container =
+            document.getElementById("resultsContainer");
+
+        container.innerHTML = `
+
+            <div class="results-header">
+
+                <h2>
+                    "${escapeHTML(query)}" sonuçları
+                </h2>
+
+                <p>
+                    Kaynaklar Türkçe Wikipedia üzerinden
+                    listelenmektedir.
+                </p>
+
+            </div>
+
+            <div class="history-results"></div>
+        `;
+
+
+        const results =
+            container.querySelector(".history-results");
+
+
+        for (let i = 0; i < titles.length; i++) {
+
+            let description =
+                descriptions[i] || "Açıklama bulunamadı.";
+
+            let sourceURL =
+                urls[i] ||
+                `https://tr.wikipedia.org/wiki/${encodeURIComponent(
+                    titles[i].replace(/ /g, "_")
+                )}`;
+
+            results.innerHTML += `
+
+                <article class="history-result-card">
+
+                    <span class="result-number">
+                        ${String(i + 1).padStart(2, "0")}
+                    </span>
+
+                    <h3>
+                        ${escapeHTML(titles[i])}
+                    </h3>
+
+                    <p>
+                        ${escapeHTML(description)}
+                    </p>
+
+                    <div class="source-box">
+
+                        <strong>
+                            📚 Kaynak
+                        </strong>
+
+                        <a
+                            href="${escapeHTML(sourceURL)}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Türkçe Wikipedia →
+                        </a>
+
+                    </div>
+
+                </article>
+            `;
+        }
+    }
+
+
+    function searchCategory(category) {
+
+        const input =
+            document.getElementById("historySearch");
+
+        input.value = category;
+
+        searchHistory();
+
+    }
+
+
+    /*
+     * Sayfa açıldığında Enter tuşunu destekle.
+     */
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        function () {
+
+            const input =
+                document.getElementById("historySearch");
+
+            if (!input) return;
+
+            input.addEventListener(
+                "keydown",
+                function (event) {
+
+                    if (event.key === "Enter") {
+
+                        event.preventDefault();
+
+                        searchHistory();
+                    }
+
+                }
+            );
+
+        }
+    );
 
 </script>
 
