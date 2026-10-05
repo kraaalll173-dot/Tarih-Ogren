@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TARİH ÖĞREN</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background: #0b1018;
+            color: #f4efe4;
+        }
+
+        header {
+            padding: 25px 8%;
+            border-bottom: 1px solid #293342;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #c9a45c;
+        }
+
+        nav a {
+            color: #ddd;
+            text-decoration: none;
+            margin-left: 25px;
+            font-family: Arial, sans-serif;
+        }
+
+        nav a:hover {
+            color: #c9a45c;
+        }
+
+        .hero {
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    #1a2738,
+                    #0b1018 65%
+                );
+        }
+
+        .hero-content {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .small-title {
+            color: #c9a45c;
+            letter-spacing: 5px;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: clamp(50px, 8vw, 95px);
+            line-height: 1.05;
+            margin-bottom: 25px;
+        }
+
+        h1 span {
+            color: #c9a45c;
+        }
+
+        .description {
+            max-width: 650px;
+            margin: auto;
+            color: #aaa;
+            font-family: Arial, sans-serif;
+            font-size: 17px;
+            line-height: 1.7;
+            margin-bottom: 35px;
+        }
+
+        .search-box {
+            max-width: 720px;
+            margin: auto;
+            display: flex;
+            background: #111923;
+            border: 1px solid #3a4655;
+            padding: 8px;
+            border-radius: 6px;
+        }
+
+        .search-box input {
+            flex: 1;
+            padding: 16px;
+            border: none;
+            outline: none;
+            background: transparent;
+            color: white;
+            font-size: 17px;
+        }
+
+        .search-box button {
+            border: none;
+            background: #c9a45c;
+            color: #111;
+            font-weight: bold;
+            padding: 0 30px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .search-box button:hover {
+            background: #e0bd72;
+        }
+
+        .source-info {
+            margin-top: 15px;
+            color: #777;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+        }
+
+        .categories {
+            padding: 100px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title p {
+            color: #c9a45c;
+            letter-spacing: 4px;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+        }
+
+        .section-title h2 {
+            font-size: 42px;
+            margin-top: 12px;
+        }
+
+        .section-title span {
+            color: #c9a45c;
+        }
+
+        .category-grid {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .category-card {
+            background: #111923;
+            border: 1px solid #293544;
+            color: white;
+            padding: 30px;
+            text-align: left;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            border-color: #c9a45c;
+        }
+
+        .category-icon {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .category-card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .category-card p {
+            color: #8e96a1;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        .results {
+            max-width: 1000px;
+            margin: auto;
+            padding: 30px 8% 100px;
+        }
+
+        .result-card {
+            background: #111923;
+            border: 1px solid #293544;
+            padding: 35px;
+            margin-top: 25px;
+        }
+
+        .result-card h2 {
+            color: #c9a45c;
+            margin-bottom: 15px;
+        }
+
+        .result-card p {
+            color: #bbb;
+            font-family: Arial, sans-serif;
+        }
+
+        .about {
+            padding: 100px 20px;
+            text-align: center;
+            background: #101722;
+        }
+
+        .about-title {
+            color: #c9a45c;
+            letter-spacing: 4px;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+        }
+
+        .about h2 {
+            font-size: 42px;
+            margin: 15px 0 25px;
+        }
+
+        .about h2 span {
+            color: #c9a45c;
+        }
+
+        .about p:last-child {
+            max-width: 650px;
+            margin: auto;
+            color: #999;
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
+        }
+
+        footer {
+            padding: 35px 8%;
+            border-top: 1px solid #293342;
+            display: flex;
+            justify-content: space-between;
+            color: #777;
+            font-family: Arial, sans-serif;
+        }
+
+        @media (max-width: 800px) {
+            nav {
+                display: none;
+            }
+
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .search-box {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .search-box button {
+                padding: 15px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        TARİH <span>ÖĞREN</span>
+    </div>
+
+    <nav>
+        <a href="#">Ana Sayfa</a>
+        <a href="#kategoriler">Kategoriler</a>
+        <a href="#hakkimizda">Hakkımızda</a>
+    </nav>
+
+</header>
+
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <p class="small-title">
+            TARİHİN İZİNİ SÜR
+        </p>
+
+        <h1>
+            Tarihi <span>Öğren.</span><br>
+            Geçmişi <span>Keşfet.</span>
+        </h1>
+
+        <p class="description">
+            Tarihî kişiler, savaşlar, devletler ve olaylar
+            hakkında bilgi edin ve kaynaklarını keşfet.
+        </p>
+
+        <div class="search-box">
+
+            <input
+                id="searchInput"
+                type="text"
+                placeholder="Örneğin: Fatih Sultan Mehmet"
+            >
+
+            <button onclick="searchHistory()">
+                ARA
+            </button>
+
+        </div>
+
+        <p class="source-info">
+            📚 Gerçek kaynaklarla tarih araştırması
+        </p>
+
+    </div>
+
+</section>
+
+
+<section id="kategoriler" class="categories">
+
+    <div class="section-title">
+
+        <p>KEŞFET</p>
+
+        <h2>
+            Tarihin her dönemini
+            <span>araştır.</span>
+        </h2>
+
+    </div>
+
+
+    <div class="category-grid">
+
+        <button class="category-card"
+                onclick="searchCategory('Tarihî Kişiler')">
+
+            <div class="category-icon">👑</div>
+
+            <h3>Tarihî Kişiler</h3>
+
+            <p>
+                Hükümdarlar, komutanlar,
+                bilim insanları ve önemli kişiler.
+            </p>
+
+        </button>
+
+
+        <button class="category-card"
+                onclick="searchCategory('Savaşlar')">
+
+            <div class="category-icon">⚔️</div>
+
+            <h3>Savaşlar</h3>
+
+            <p>
+                Savaşlar, muharebeler,
+                taraflar ve sonuçları.
+            </p>
+
+        </button>
+
+
+        <button class="category-card"
+                onclick="searchCategory('Devletler')">
+
+            <div class="category-icon">🏛️</div>
+
+            <h3>Devletler</h3>
+
+            <p>
+                İmparatorluklar, krallıklar
+                ve tarihî devletler.
+            </p>
+
+        </button>
+
+
+        <button class="category-card"
+                onclick="searchCategory('Antlaşmalar')">
+
+            <div class="category-icon">📜</div>
+
+            <h3>Antlaşmalar</h3>
+
+            <p>
+                Tarihin önemli antlaşmaları
+                ve sonuçları.
+            </p>
+
+        </button>
+
+
+        <button class="category-card"
+                onclick="searchCategory('Medeniyetler')">
+
+            <div class="category-icon">🏺</div>
+
+            <h3>Medeniyetler</h3>
+
+            <p>
+                Antik ve modern medeniyetler.
+            </p>
+
+        </button>
+
+
+        <button class="category-card"
+                onclick="searchCategory('Dünya Tarihi')">
+
+            <div class="category-icon">🌍</div>
+
+            <h3>Dünya Tarihi</h3>
+
+            <p>
+                Dünyanın farklı bölgelerinden
+                tarihî olaylar.
+            </p>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<section id="sonuclar" class="results">
+
+    <div id="resultsContainer"></div>
+
+</section>
+
+
+<section id="hakkimizda" class="about">
+
+    <p class="about-title">
+        HAKKIMIZDA
+    </p>
+
+    <h2>
+        Tarihi daha <span>anlaşılır</span>
+        hale getiriyoruz.
+    </h2>
+
+    <p>
+        TARİH ÖĞREN, tarih hakkında bilgi edinmek isteyen
+        herkes için kaynakları açıkça gösteren bir bilgi
+        platformu olarak geliştirilmektedir.
+    </p>
+
+</section>
+
+
+<footer>
+
+    <div class="logo">
+        TARİH <span>ÖĞREN</span>
+    </div>
+
+    <p>
+        Bilgi kaynaksız değildir.
+    </p>
+
+</footer>
+
+
+<script>
+
+function searchHistory() {
+
+    const input =
+        document.getElementById("searchInput");
+
+    const query =
+        input.value.trim();
+
+    if (query === "") {
+
+        alert("Lütfen bir tarihî konu yaz.");
+
+        return;
+    }
+
+    showResult(query);
+}
+
+
+function searchCategory(category) {
+
+    const input =
+        document.getElementById("searchInput");
+
+    input.value = category;
+
+    input.focus();
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+
+function showResult(query) {
+
+    const container =
+        document.getElementById("resultsContainer");
+
+    container.innerHTML = `
+
+        <div class="result-card">
+
+            <h2>${escapeHTML(query)}</h2>
+
+            <p>
+                TARİH ÖĞREN araştırma sistemi hazırlanıyor.
+            </p>
+
+            <p style="margin-top:15px;">
+
+                Bir sonraki aşamada burada gerçek
+                kaynaklardan alınan bilgiler ve
+                kaynak bağlantıları gösterilecek.
+
+            </p>
+
+        </div>
+
+    `;
+
+    document
+        .getElementById("sonuclar")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+}
+
+
+function escapeHTML(text) {
+
+    const div =
+        document.createElement("div");
+
+    div.textContent = text;
+
+    return div.innerHTML;
+}
+
+
+document
+    .getElementById("searchInput")
+    .addEventListener("keydown", function(event) {
+
+        if (event.key === "Enter") {
+
+            searchHistory();
+
+        }
+
+    });
+
+</script>
+
+</body>
+</html>
